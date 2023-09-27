@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BackendApiService } from './services/backend-api.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'good-tomatoes';
+
+  constructor( private back:BackendApiService ) { }
+
+  ngOnInit(): void {
+    this.getData();
+  }
+
+  getData(){
+    this.back.testApi().subscribe(res=>{
+      console.log(res);
+    })
+  }
+
 }
