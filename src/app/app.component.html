@@ -1,9 +1,9 @@
-<app-header></app-header>
-<app-copyright></app-copyright>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12">
-            <router-outlet></router-outlet>
-        </div>
+<div class="container-fluid content">
+    <app-header></app-header>
+  
+    <div class="flex-grow-1 router-outlet-background">
+      <router-outlet></router-outlet>
     </div>
+  
+    <app-footer></app-footer>
 </div>
