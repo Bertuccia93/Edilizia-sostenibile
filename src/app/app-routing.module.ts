@@ -6,6 +6,7 @@ import { RegisterComponent } from './component/register/register.component';
 import { DetailBookComponent } from './component/detail-book/detail-book.component';
 
 const routes: Routes = [
+  { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'details', component: DetailBookComponent },
   { path: 'login', component: LoginComponent }, 
