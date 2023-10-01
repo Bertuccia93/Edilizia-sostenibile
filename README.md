@@ -36,4 +36,5 @@ To run The Good Book locally, follow these steps:
 
 - Angular
 - Bootstrap 5
+- Google books api
 
