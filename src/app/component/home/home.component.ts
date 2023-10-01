@@ -10,48 +10,23 @@ import { BackendApiService, Book } from 'src/app/services/backend-api.service';
 export class HomeComponent implements OnInit {
   boks: Book[] = [];
   displayedBooks: Book[] = [];
-  currentPage = 0;
-  booksPerPage = 3;
+  booksPerPage = 5;
+  inputValue = '';
 
   constructor(private gbs: BackendApiService) { }
 
   ngOnInit(): void {
   }
 
-  async onSearchInputChange(event: Event): Promise<void> {
-    
-    const inputValue = (event.target as HTMLInputElement).value;
-    if( inputValue =='') {
-      this.displayedBooks=[]
-    }else{  
-      this.gbs.search(inputValue).subscribe(res => {
-        this.boks = res;
-        this.updateDisplayedBooks();
-      });
-    }
-  }
-
-  prevPage() {
-    if (this.currentPage > 0) {
-      this.currentPage--;
+  onSearchInputChange(event: Event) {
+    this.inputValue = (event.target as HTMLInputElement).value;
+    this.gbs.search(this.inputValue).subscribe(res => {
+      this.boks = res;
       this.updateDisplayedBooks();
-    }
-  }
-
-  nextPage() {
-    if (this.currentPage < this.maxPage) {
-      this.currentPage++;
-      this.updateDisplayedBooks();
-    }
+    });
   }
 
   updateDisplayedBooks() {
-    const startIndex = this.currentPage * this.booksPerPage;
-    const endIndex = startIndex + this.booksPerPage;
-    this.displayedBooks = this.boks.slice(startIndex, endIndex);
-  }
-
-  get maxPage() {
-    return Math.ceil(this.boks.length / this.booksPerPage) - 1;
+    this.displayedBooks = this.boks.slice(0, this.booksPerPage);
   }
 }

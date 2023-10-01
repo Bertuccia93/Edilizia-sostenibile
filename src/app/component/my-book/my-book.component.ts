@@ -20,7 +20,6 @@ export class MyBookComponent implements OnInit {
   getDetailBook(bookId:string){
     this.gbs.getById(bookId).subscribe(res=>{
       this.bookData=res;
-      console.log(this.bookData)
     })
   }
 

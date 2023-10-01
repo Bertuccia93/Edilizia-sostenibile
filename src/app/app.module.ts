@@ -6,12 +6,9 @@ import { AppComponent } from './app.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { DetailBookComponent } from './component/detail-book/detail-book.component';
 import { HeaderComponent } from './component/header/header.component';
-import { CopyrightComponent } from './component/copyright/copyright.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { HomeComponent } from './component/home/home.component';
-import { LoginComponent } from './component/login/login.component';
 import { MyBookComponent } from './component/my-book/my-book.component';
-import { RegisterComponent } from './component/register/register.component';
 import { SearchBookComponent } from './component/search-book/search-book.component';
 import { BackendApiService } from './services/backend-api.service';
 
@@ -20,12 +17,10 @@ import { BackendApiService } from './services/backend-api.service';
     AppComponent,
     SearchBookComponent,
     DetailBookComponent,
-    LoginComponent,
-    RegisterComponent,
     HeaderComponent,
     FooterComponent,
     MyBookComponent,
-    CopyrightComponent,
+   
     HomeComponent,
     
   ],

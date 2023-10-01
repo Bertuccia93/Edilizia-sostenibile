@@ -1,17 +1,19 @@
-<div class="card mb-3 custom-card "   style="cursor: pointer;" (click)="navigateToMyBook(book.id)">
+<div class="card mb-3" style="cursor: pointer; display: flex; flex-direction: column;" (click)="navigateToMyBook(book.id)">
   <div class="row g-0">
-    <div class="col-md-4">
-      <img [src]="book?.volumeInfo?.imageLinks?.thumbnail || 'URL_PORTE_DEFAULT'" alt="Immagine del libro" class="img-fluid" style="max-width: 128px; height: auto;" />
+    <div class="col-12 col-md-2">
+      <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
+        <img [src]="book?.volumeInfo?.imageLinks?.thumbnail" alt="Immagine del libro" class="img-fluid" style="max-width: 128px; height: auto; max-height: 100%; width: auto;" />
+      </div>
     </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-height: 2rem;">
+    <div class="col-12 col-md-10">
+      <div class="card-body" style="height: 100%;">
+        <h5 class="card-title text-truncate" style="max-height: 2rem;">
           {{ book?.volumeInfo?.title }}
         </h5>
         <p class="card-text">
           <strong>{{ getAuthorsText() }}</strong>
         </p>
-        <p class="card-text"><strong>Genere:</strong> {{ book.volumeInfo.categories?book.volumeInfo.categories : "genere non disponibile" }}</p>
+        <p class="card-text text-break"><strong>Genere:</strong> {{ book.volumeInfo.categories ? book.volumeInfo.categories : "genere non disponibile" }}</p>
       </div>
     </div>
   </div>

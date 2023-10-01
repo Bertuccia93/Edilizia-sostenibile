@@ -1,5 +1,4 @@
-
-<div class="container-fluid  mt-5">
+<div class="container-fluid mt-5">
   <div class="d-flex flex-column justify-content-center align-items-center">
     <h1 class="mb-4">The Good Book</h1>
     <h4 class="mb-4">Cerca qui i tuoi libri preferiti</h4>
@@ -9,19 +8,12 @@
         <i class="bi bi-search"></i>
       </button>
     </div>
-    <!-- Aggiungi un container separato per le card subito sotto l'elemento di ricerca -->
-<div class="container mt-3 "> <!-- Riduci il margine superiore qui -->
-  <!-- Frecce di navigazione Bootstrap Icon sulla sinistra e sulla destra -->
-  <div class="d-flex justify-content-between align-items-center">
-    <i class="bi bi-chevron-left" (click)="prevPage()" [hidden]="currentPage === 0"></i>
-    <div>
-      <!-- Rimuovi la classe col-md-6 qui -->
-      <div *ngFor="let bok of displayedBooks">
-        <app-detail-book  [book]="bok"></app-detail-book>
+    <div *ngIf="inputValue !== ''" class="container mt-3 position-relative">
+      <div>
+        <div *ngFor="let book of displayedBooks">
+          <app-detail-book [book]="book"></app-detail-book>
+        </div>
       </div>
     </div>
-    <i class="bi bi-chevron-right" (click)="nextPage()" [hidden]="currentPage === maxPage"></i>
-  </div>
-</div>
   </div>
 </div>
