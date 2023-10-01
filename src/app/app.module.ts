@@ -13,6 +13,7 @@ import { LoginComponent } from './component/login/login.component';
 import { MyBookComponent } from './component/my-book/my-book.component';
 import { RegisterComponent } from './component/register/register.component';
 import { SearchBookComponent } from './component/search-book/search-book.component';
+import { BackendApiService } from './services/backend-api.service';
 
 @NgModule({
   declarations: [
@@ -25,12 +26,14 @@ import { SearchBookComponent } from './component/search-book/search-book.compone
     FooterComponent,
     MyBookComponent,
     CopyrightComponent,
-    HomeComponent
+    HomeComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    
     
   ],
   providers: [],

@@ -12,13 +12,8 @@ export class AppComponent {
   constructor( private back:BackendApiService ) { }
 
   ngOnInit(): void {
-    this.getData();
   }
 
-  getData(){
-    this.back.testApi().subscribe(res=>{
-      console.log(res);
-    })
-  }
+
 
 }
