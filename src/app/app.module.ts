@@ -9,27 +9,20 @@ import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { HomeComponent } from './component/home/home.component';
 import { MyBookComponent } from './component/my-book/my-book.component';
-import { SearchBookComponent } from './component/search-book/search-book.component';
-import { BackendApiService } from './services/backend-api.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchBookComponent,
     DetailBookComponent,
     HeaderComponent,
     FooterComponent,
     MyBookComponent,
-   
     HomeComponent,
-    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    
-    
   ],
   providers: [],
   bootstrap: [AppComponent]
