@@ -11,6 +11,22 @@ export class DetailBookComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  } 
+
+
+  getAuthorsText(): string {
+    if (!this.book || !this.book.volumeInfo || !this.book.volumeInfo.authors) {
+      return "Non ho trovato autori";
+    }
+    const authors = this.book.volumeInfo.authors;
+    if (authors.length === 1) {
+      return "Autore: " + authors[0];
+    } else if (authors.length > 1) {
+      return "Autori: " + authors.join(', ');
+    } else {
+      return "Non ho trovato autori";
+    }
   }
+
 
 }
