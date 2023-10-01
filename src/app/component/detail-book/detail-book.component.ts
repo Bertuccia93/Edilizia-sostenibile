@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { BackendApiService, Book } from 'src/app/services/backend-api.service';
 
 @Component({
@@ -8,7 +9,8 @@ import { BackendApiService, Book } from 'src/app/services/backend-api.service';
 })
 export class DetailBookComponent implements OnInit {
   @Input() book = {} as Book;
-  constructor() { }
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   } 
@@ -26,6 +28,10 @@ export class DetailBookComponent implements OnInit {
     } else {
       return "Non ho trovato autori";
     }
+  }
+
+  navigateToMyBook(bookId: string) {
+    this.router.navigate(['/my-book', bookId]);
   }
 
 
