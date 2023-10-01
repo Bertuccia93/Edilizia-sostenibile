@@ -1,27 +1,39 @@
-# GoodTomatoes
+# The Good Book
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
+The Good Book is a single-page web application built using Angular and Bootstrap 5. It allows users to search for books in real-time and displays the top 3 results that match the search query. Users can click on the book cards to view more details about each book.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Real-time book search with instant results.
+- Detailed book information, including title, author, description, and cover image.
+- User-friendly interface with responsive design.
 
-## Code scaffolding
+## Upcoming Features (Phase 2)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+In the next phase of development, i plan to add the following features:
+  
+- User authentication: Implement a user login and registration system to allow users to create accounts and log in.
+- Favorites functionality: Users will be able to save their favorite books to their profiles.
+- User profiles: Each user will have their own profile page to manage their favorite books and account settings.
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To run The Good Book locally, follow these steps:
 
-## Running unit tests
+1. Clone the repository to your local machine:
+2. Navigate to the project directory:
+3. Install the required dependencies:
+4. Start the development server:
+5. Open your web browser and go to `http://localhost:4200/` to access the application.
+   
+## Usage
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Enter a search query in the input field.
+- As you type, the application will display the top 3 book results that match your query.
+- Click on a book card to view more details about the selected book.
 
-## Running end-to-end tests
+## Technologies Used
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Angular
+- Bootstrap 5
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
