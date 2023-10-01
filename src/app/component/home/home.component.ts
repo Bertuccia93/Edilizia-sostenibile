@@ -26,7 +26,6 @@ export class HomeComponent implements OnInit {
     }else{  
       this.gbs.search(inputValue).subscribe(res => {
         this.boks = res;
-        console.log(res)
         this.updateDisplayedBooks();
       });
     }

@@ -1,1 +1,16 @@
-<p>my-book works!</p>
+<div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <img [src]="bookData.volumeInfo.imageLinks.smallThumbnail" alt="Copertina del libro" class="img-fluid">
+      </div>
+      <div class="col-md-8">
+        <h1>{{ bookData.volumeInfo.title }}</h1>
+        <p>Autore: {{ bookData.volumeInfo.authors[0] }}</p>
+        <p>Pubblicato da: {{ bookData.volumeInfo.publisher }}</p>
+        <p>Data di pubblicazione: {{ bookData.volumeInfo.publishedDate }}</p>
+        <p>Categorie: {{ bookData.volumeInfo.categories.join(', ') }}</p>
+        <p>Descrizione: {{ bookData.volumeInfo.description }}</p>
+        <!-- Altre informazioni del libro -->
+      </div>
+    </div>
+  </div>
